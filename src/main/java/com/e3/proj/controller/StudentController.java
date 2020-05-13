@@ -24,8 +24,8 @@ public class StudentController {
         this.studentRepository = studentRepository;
     }
 
-    @GetMapping("signup")
-    public String showSignUpForm(Student student) {
+    @GetMapping("add-assessment-form")
+    public String showAddAssessmentForm(Student student) {
         return "add-student";
     }
 
@@ -62,7 +62,7 @@ public class StudentController {
 
         studentRepository.save(student);
         model.addAttribute("students", studentRepository.findAll());
-        return "index";
+        return "redirect:/students/list";
     }
 
     @GetMapping("delete/{id}")
@@ -71,6 +71,6 @@ public class StudentController {
                 .orElseThrow(() -> new IllegalArgumentException("Invalid student ID: " + id));
         studentRepository.delete(student);
         model.addAttribute("students", studentRepository.findAll());
-        return "index";
+        return "redirect:/students/list";
     }
 }

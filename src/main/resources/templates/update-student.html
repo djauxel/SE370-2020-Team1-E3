@@ -14,7 +14,7 @@
 
 <body>
 <div class="container my-5">
-    <h3> Update assessment form</h3>
+    <h3>Update assessment form</h3>
     <div class="card">
         <div class="card-body">
             <div class="col-md-8">
@@ -36,25 +36,25 @@
                         <div class="form-group col-md-8">
                             <label for="instructorName" class="col-form-label">Instructor name</label>
                             <input type="text" th:field="*{instructorName}" class="form-control" id="instructorName" placeholder="">
-                            <span th:if="${#fields.hasErrors('instructorName')}" th:errors="instructorName" class="text-danger"></span>
+                            <span th:if="${#fields.hasErrors('instructorName')}" th:errors="*{instructorName}" class="text-danger"></span>
                         </div>
 
                         <div class="form-group col-md-8">
                             <label for="instructorEmail" class="col-form-label">Instructor email</label>
                             <input type="text" th:field="*{instructorEmail}" class="form-control" id="instructorEmail" placeholder="">
-                            <span th:if="${#fields.hasErrors('instructorEmail')}" th:errors="instructorEmail" class="text-danger"></span>
+                            <span th:if="${#fields.hasErrors('instructorEmail')}" th:errors="*{instructorEmail}" class="text-danger"></span>
                         </div>
 
                         <div class="form-group col-md-8">
                             <label for="courseName" class="col-form-label">Course name</label>
                             <input type="text" th:field="*{courseName}" class="form-control" id="courseName" placeholder="">
-                            <span th:if="${#fields.hasErrors('courseName')}" th:errors="courseName" class="text-danger"></span>
+                            <span th:if="${#fields.hasErrors('courseName')}" th:errors="*{courseName}" class="text-danger"></span>
                         </div>
 
                         <div class="form-group col-md-8">
                             <label for="semester" class="col-form-label">Semester</label>
                             <input type="text" th:field="*{semester}" class="form-control" id="semester" placeholder="">
-                            <span th:if="${#fields.hasErrors('semester')}" th:errors="instructorName" class="text-danger"></span>
+                            <span th:if="${#fields.hasErrors('semester')}" th:errors="*{semester}" class="text-danger"></span>
                         </div>
 
                         <div class="form-group col-md-8">

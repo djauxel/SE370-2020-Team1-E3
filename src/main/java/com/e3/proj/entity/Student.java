@@ -1,8 +1,6 @@
 package com.e3.proj.entity;
 
 import javax.persistence.*;
-import javax.validation.constraints.AssertFalse;
-import javax.validation.constraints.AssertTrue;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 
